@@ -78,13 +78,13 @@ public class Main {
             int escolha = sc.nextInt();
             switch (escolha) {
                 case 1 -> {
-                    cadastrarPet(pessoa);
+                    cadastrarPet();
                 }
                 case 2 -> {
                     adotarPet(pessoa);
                 }
                 case 3 -> {
-                    removerPet(pessoa);
+                    removerPet();
                 }
                 case 4 -> {
                     brincar(pessoa);
@@ -136,7 +136,7 @@ public class Main {
 
     }
 
-    private static void cadastrarPet(Pessoa pessoaLogada) {
+    private static void cadastrarPet() {
         System.out.println("Apenas nos informe o nome do pet:");
         banco.cadastrarPet(new Pet(sc.next()));
     }
@@ -161,7 +161,7 @@ public class Main {
     }
 
 
-    private static void removerPet(Pessoa pessoaLogada) {
+    private static void removerPet() {
         for (Pet pet : banco.getPets()) {
             System.out.println(pet);
             System.out.println("\n\n");
